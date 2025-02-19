@@ -6,8 +6,17 @@ import Projects from '@/components/sections/Projects';
 import Certificates from '@/components/sections/Certificates';
 import Profile from '@/components/sections/Profile';
 import Publications from '@/components/sections/Publications';
+import { useEffect } from 'react';
 
 const Index = () => {
+  useEffect(() => {
+    // Enable smooth scrolling
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
       <Navigation />

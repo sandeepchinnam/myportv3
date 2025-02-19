@@ -1,4 +1,6 @@
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 const skills = [
   {
     category: "Frontend",
@@ -15,8 +17,16 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-800/50 dark:to-neutral-900">
+    <section 
+      ref={elementRef}
+      id="skills" 
+      className={`py-20 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-800/50 dark:to-neutral-900 transform transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground hover:scale-105 transition-transform duration-200">
@@ -30,7 +40,9 @@ const Skills = () => {
             {skills.map((skillSet, index) => (
               <div
                 key={skillSet.category}
-                className="group p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50"
+                className={`group p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50 transform transition-all duration-1000 delay-${index * 200} ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
               >
                 <h3 className="text-xl font-semibold mb-4 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
                   {skillSet.category}
