@@ -16,13 +16,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-neutral-50 dark:bg-neutral-800/50">
+    <section id="skills" className="py-20 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-800/50 dark:to-neutral-900">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground">
+          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground hover:scale-105 transition-transform duration-200">
             Skills
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-accent-foreground to-accent-foreground/70">
             Technical Expertise
           </h2>
           
@@ -30,16 +30,18 @@ const Skills = () => {
             {skills.map((skillSet, index) => (
               <div
                 key={skillSet.category}
-                className="p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="group p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50"
               >
-                <h3 className="text-xl font-semibold mb-4 dark:text-white">{skillSet.category}</h3>
+                <h3 className="text-xl font-semibold mb-4 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
+                  {skillSet.category}
+                </h3>
                 <ul className="space-y-2">
                   {skillSet.items.map((skill) => (
                     <li
                       key={skill}
-                      className="flex items-center text-neutral-600 dark:text-neutral-300"
+                      className="flex items-center text-neutral-600 dark:text-neutral-300 hover:text-accent-foreground dark:hover:text-white transition-colors duration-200"
                     >
-                      <span className="w-2 h-2 bg-accent-foreground dark:bg-accent-foreground/70 rounded-full mr-2"></span>
+                      <span className="w-2 h-2 bg-accent-foreground/70 dark:bg-accent-foreground/70 rounded-full mr-2 group-hover:scale-125 transition-transform duration-200"></span>
                       {skill}
                     </li>
                   ))}
