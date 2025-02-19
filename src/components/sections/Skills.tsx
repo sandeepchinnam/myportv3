@@ -16,13 +16,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-neutral-50">
+    <section id="skills" className="py-20 bg-neutral-50 dark:bg-neutral-800/50">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent rounded-full text-accent-foreground">
+          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground">
             Skills
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 dark:text-white">
             Technical Expertise
           </h2>
           
@@ -30,16 +30,16 @@ const Skills = () => {
             {skills.map((skillSet, index) => (
               <div
                 key={skillSet.category}
-                className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <h3 className="text-xl font-semibold mb-4">{skillSet.category}</h3>
+                <h3 className="text-xl font-semibold mb-4 dark:text-white">{skillSet.category}</h3>
                 <ul className="space-y-2">
                   {skillSet.items.map((skill) => (
                     <li
                       key={skill}
-                      className="flex items-center text-neutral-600"
+                      className="flex items-center text-neutral-600 dark:text-neutral-300"
                     >
-                      <span className="w-2 h-2 bg-accent-foreground rounded-full mr-2"></span>
+                      <span className="w-2 h-2 bg-accent-foreground dark:bg-accent-foreground/70 rounded-full mr-2"></span>
                       {skill}
                     </li>
                   ))}

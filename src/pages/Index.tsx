@@ -9,7 +9,7 @@ import Publications from '@/components/sections/Publications';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-neutral-900">
       <Navigation />
       <Hero />
       <Skills />
