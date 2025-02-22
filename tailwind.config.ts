@@ -26,11 +26,11 @@ export default {
       colors: {
         border: {
           DEFAULT: "#2C3E50",
-          dark: "#424242",
+          dark: "#1f2937",
         },
         background: {
           DEFAULT: "#FFFFFF",
-          dark: "#121212",
+          dark: "#0B1121", // Dark navy from the image
         },
         foreground: {
           DEFAULT: "#2C3E50",
@@ -38,23 +38,27 @@ export default {
         },
         accent: {
           DEFAULT: "#9b87f5",
-          foreground: "#00FFFF",
+          foreground: "#4F46E5",
         },
         card: {
           DEFAULT: "#FFFFFF",
-          dark: "#1E1E1E",
+          dark: "#131B2E", // Slightly lighter navy for cards
+        },
+        primary: {
+          DEFAULT: "#4F46E5", // Indigo color for primary elements
+          dark: "#6366F1",
         },
         neutral: {
-          50: "#F9F9F9",
-          100: "#F3F3F3",
-          200: "#E5E5E5",
-          300: "#D4D4D4",
-          400: "#A3A3A3",
-          500: "#737373",
-          600: "#525252",
-          700: "#404040",
-          800: "#262626",
-          900: "#171717",
+          50: "#F9FAFB",
+          100: "#F3F4F6",
+          200: "#E5E7EB",
+          300: "#D1D5DB",
+          400: "#9CA3AF",
+          500: "#6B7280",
+          600: "#4B5563",
+          700: "#374151",
+          800: "#1F2937",
+          900: "#111827",
         },
       },
       keyframes: {
@@ -72,7 +76,8 @@ export default {
         slideIn: "slideIn 0.5s ease-out forwards",
       },
       backgroundImage: {
-        'gradient-purple': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
+        'gradient-purple': 'linear-gradient(90deg, #4F46E5 0%, #9333EA 100%)',
+        'gradient-text': 'linear-gradient(90deg, #60A5FA 0%, #A855F7 100%)',
       },
     },
   },
