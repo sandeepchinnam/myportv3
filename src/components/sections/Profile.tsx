@@ -29,6 +29,28 @@ const Profile = () => {
                   <h3 className="font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">Location</h3>
                   <p className="text-neutral-600 dark:text-neutral-300 group-hover:translate-x-1 transition-transform duration-200">San Francisco, CA</p>
                 </div>
+                <button 
+                  className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-accent-foreground text-white rounded-lg hover:bg-accent-foreground/90 transition-colors duration-200 group"
+                  onClick={() => window.open('/resume.pdf', '_blank')}
+                >
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className="transition-transform duration-200 group-hover:translate-y-0.5"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  Download Resume
+                </button>
               </div>
             </div>
             <div className="order-1 md:order-2">
