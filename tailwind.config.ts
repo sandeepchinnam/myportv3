@@ -24,18 +24,29 @@ export default {
         display: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: {
+          DEFAULT: "#2C3E50",
+          dark: "#424242",
+        },
+        background: {
+          DEFAULT: "#F9F9F9",
+          dark: "#121212",
+        },
+        foreground: {
+          DEFAULT: "#2C3E50",
+          dark: "#F9F9F9",
+        },
         accent: {
-          DEFAULT: "#F4F0FF",
-          foreground: "#7C3AED",
+          DEFAULT: "#FF6F61",
+          foreground: "#00FFFF",
+        },
+        card: {
+          DEFAULT: "#FFFFFF",
+          dark: "#1E1E1E",
         },
         neutral: {
-          50: "#FAFAFA",
-          100: "#F5F5F5",
+          50: "#F9F9F9",
+          100: "#F3F3F3",
           200: "#E5E5E5",
           300: "#D4D4D4",
           400: "#A3A3A3",

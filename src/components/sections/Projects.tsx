@@ -25,24 +25,24 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white to-neutral-50 dark:from-neutral-900 dark:to-neutral-800/50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground hover:scale-105 transition-transform duration-200">
+    <section id="projects" className="py-16 bg-background dark:bg-background-dark">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <span className="inline-block px-3 py-1 mb-6 text-sm font-medium bg-accent/10 dark:bg-accent-foreground/10 rounded-full text-accent dark:text-accent-foreground hover:scale-105 transition-transform duration-200">
             Projects
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-accent-foreground to-accent-foreground/70">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-10 text-foreground dark:text-foreground-dark">
             Featured Work
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
               <a
                 key={project.title}
                 href={project.link}
                 className="group block"
               >
-                <div className="bg-white dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50">
+                <div className="bg-card dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50">
                   <div className="relative aspect-video overflow-hidden">
                     <img
                       src={project.image}
@@ -51,16 +51,16 @@ const Projects = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-accent-foreground transition-colors duration-200 dark:text-white">
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-accent dark:group-hover:text-accent-foreground transition-colors duration-200 text-foreground dark:text-foreground-dark">
                       {project.title}
                     </h3>
-                    <p className="text-neutral-600 dark:text-neutral-300 mb-4">{project.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 text-sm mb-3">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 text-sm bg-neutral-100 dark:bg-neutral-700 rounded-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-200"
+                          className="px-2 py-1 text-xs bg-background dark:bg-background-dark rounded-full group-hover:bg-accent/10 group-hover:text-accent dark:group-hover:bg-accent-foreground/10 dark:group-hover:text-accent-foreground transition-colors duration-200"
                         >
                           {tag}
                         </span>
