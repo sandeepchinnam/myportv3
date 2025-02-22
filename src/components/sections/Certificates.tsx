@@ -3,20 +3,17 @@ const certificates = [
   {
     title: "Advanced Web Development",
     issuer: "Tech Academy",
-    date: "2023",
-    image: "/placeholder.svg"
+    date: "2023"
   },
   {
     title: "UI/UX Design Fundamentals",
     issuer: "Design Institute",
-    date: "2023",
-    image: "/placeholder.svg"
+    date: "2023"
   },
   {
     title: "Cloud Architecture",
     issuer: "Cloud Experts",
-    date: "2022",
-    image: "/placeholder.svg"
+    date: "2022"
   }
 ];
 
@@ -38,13 +35,6 @@ const Certificates = () => {
                 key={cert.title}
                 className="group bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50"
               >
-                <div className="aspect-[4/3] mb-6 overflow-hidden rounded-lg">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
                 <h3 className="text-xl font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
                   {cert.title}
                 </h3>
