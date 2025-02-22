@@ -29,7 +29,7 @@ export default {
           dark: "#424242",
         },
         background: {
-          DEFAULT: "#F9F9F9",
+          DEFAULT: "#FFFFFF",
           dark: "#121212",
         },
         foreground: {
@@ -37,7 +37,7 @@ export default {
           dark: "#F9F9F9",
         },
         accent: {
-          DEFAULT: "#FF6F61",
+          DEFAULT: "#9b87f5",
           foreground: "#00FFFF",
         },
         card: {
@@ -70,6 +70,9 @@ export default {
       animation: {
         fadeIn: "fadeIn 0.5s ease-out forwards",
         slideIn: "slideIn 0.5s ease-out forwards",
+      },
+      backgroundImage: {
+        'gradient-purple': 'linear-gradient(90deg, hsla(277, 75%, 84%, 1) 0%, hsla(297, 50%, 51%, 1) 100%)',
       },
     },
   },
