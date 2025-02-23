@@ -56,8 +56,8 @@ const Profile = () => {
             <div className="order-1 md:order-2">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
                 <img
-                  src="/placeholder.svg"
-                  alt="Profile"
+                  src="/lovable-uploads/1f6c4606-af5f-4eb4-a486-9406c0b3916b.png"
+                  alt="Profile portrait with bokeh light effects in the background"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
