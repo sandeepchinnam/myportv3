@@ -69,14 +69,61 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border cursor-custom;
   }
 
   body {
     @apply bg-background text-foreground;
+    cursor: none;
   }
 
   .gradient-text {
     @apply bg-gradient-text bg-clip-text text-transparent;
   }
 }
+
+/* Custom cursor styles */
+.cursor-custom {
+  cursor: none;
+}
+
+#custom-cursor {
+  width: 20px;
+  height: 20px;
+  background: theme('colors.accent.DEFAULT');
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+  z-index: 9999;
+}
+
+#cursor-blur {
+  width: 400px;
+  height: 400px;
+  background: rgba(124, 58, 237, 0.1);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  z-index: -1;
+}
+
+a:hover ~ #custom-cursor,
+button:hover ~ #custom-cursor {
+  transform: scale(1.5);
+}
+
+[data-section] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-section].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
