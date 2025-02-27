@@ -1,4 +1,6 @@
 
+import { Meteors } from "@/components/ui/meteors";
+
 const publications = [
   {
     title: "Modern Web Development Practices",
@@ -40,25 +42,30 @@ const Publications = () => {
               <a
                 key={pub.title}
                 href={pub.link}
-                className="group block bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50"
+                className="group block"
               >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
-                      {pub.title}
-                    </h3>
-                    <p className="text-neutral-600 dark:text-neutral-300 mb-2">{pub.description}</p>
-                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-                      <span>{pub.journal}</span>
-                      <span>•</span>
-                      <span>{pub.year}</span>
+                <div className="relative bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
+                        {pub.title}
+                      </h3>
+                      <p className="text-neutral-600 dark:text-neutral-300 mb-2">{pub.description}</p>
+                      <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+                        <span>{pub.journal}</span>
+                        <span>•</span>
+                        <span>{pub.year}</span>
+                      </div>
+                    </div>
+                    <div className="shrink-0">
+                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent dark:bg-accent-foreground/10 text-accent-foreground group-hover:scale-110 group-hover:bg-accent-foreground group-hover:text-white transition-all duration-200">
+                        →
+                      </span>
                     </div>
                   </div>
-                  <div className="shrink-0">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent dark:bg-accent-foreground/10 text-accent-foreground group-hover:scale-110 group-hover:bg-accent-foreground group-hover:text-white transition-all duration-200">
-                      →
-                    </span>
-                  </div>
+                  
+                  {/* Meteor effect */}
+                  <Meteors number={10} />
                 </div>
               </a>
             ))}

@@ -1,4 +1,6 @@
 
+import { Meteors } from "@/components/ui/meteors";
+
 const projects = [
   {
     title: "Project One",
@@ -39,7 +41,7 @@ const Projects = () => {
                 href={project.link}
                 className="group block"
               >
-                <div className="bg-card dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50 p-6">
+                <div className="relative bg-card dark:bg-card-dark rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50 p-6">
                   <h3 className="text-lg font-semibold mb-2 group-hover:text-accent dark:group-hover:text-accent-foreground transition-colors duration-200 text-foreground dark:text-foreground-dark">
                     {project.title}
                   </h3>
@@ -54,6 +56,9 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+                  
+                  {/* Meteor effect */}
+                  <Meteors number={15} />
                 </div>
               </a>
             ))}
