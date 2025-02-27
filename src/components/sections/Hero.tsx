@@ -1,11 +1,12 @@
 
 import { ArrowRight } from 'lucide-react';
+import { BackgroundPaths } from '@/components/ui/background-paths';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 bg-gradient-to-b from-accent/10 to-white dark:from-neutral-800 dark:to-neutral-900">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.05),transparent_25%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.05),transparent_25%)]" />
-      <div className="container mx-auto px-6 relative">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16">
+      <BackgroundPaths title="Creating Digital Experiences" />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block animate-fadeIn opacity-0 [animation-delay:200ms] px-3 py-1 mb-6 text-sm font-medium bg-accent dark:bg-accent-foreground/10 rounded-full text-accent-foreground hover:scale-105 transition-transform duration-200">
             Welcome to my portfolio
