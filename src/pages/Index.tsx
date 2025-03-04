@@ -6,6 +6,7 @@ import Projects from '@/components/sections/Projects';
 import Certificates from '@/components/sections/Certificates';
 import Profile from '@/components/sections/Profile';
 import Publications from '@/components/sections/Publications';
+import Footer from '@/components/Footer';
 import { useEffect, useRef } from 'react';
 
 const Index = () => {
@@ -75,6 +76,9 @@ const Index = () => {
       </div>
       <div data-section="publications">
         <Publications />
+      </div>
+      <div data-section="footer">
+        <Footer />
       </div>
       <div id="custom-cursor" ref={cursorRef} />
       <div id="cursor-blur" ref={cursorBlurRef} />

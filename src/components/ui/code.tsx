@@ -7,7 +7,7 @@ import {
   useMotionValue,
   useSpring,
   type SpringOptions,
-} from 'motion/react';
+} from 'framer-motion';
 
 const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 };
 
@@ -62,7 +62,7 @@ export function Magnetic({
     return () => {
       document.removeEventListener('mousemove', calculateDistance);
     };
-  }, [ref, isHovered, intensity, range]);
+  }, [ref, isHovered, intensity, range, x, y]);
 
   useEffect(() => {
     if (actionArea === 'parent' && ref.current?.parentElement) {
