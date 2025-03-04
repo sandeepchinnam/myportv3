@@ -3,12 +3,12 @@ import { Meteors } from "@/components/ui/meteors";
 
 const certificates = [
   {
-    title: "Advanced Web Development",
+    title: "AWS CLOUD PRACTITIONER",
     issuer: "Tech Academy",
     date: "2023"
   },
   {
-    title: "UI/UX Design Fundamentals",
+    title: "UNITY PROGRAMER",
     issuer: "Design Institute",
     date: "2023"
   },
