@@ -4,8 +4,8 @@ import { Magnetic } from './ui/magnetic';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://github.com", label: "GitHub" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/sandeepchinnam", label: "GitHub" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/sandeep939898/", label: "LinkedIn" },
     { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", label: "Twitter" },
     { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com", label: "Instagram" }
   ];
