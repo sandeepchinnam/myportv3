@@ -1,4 +1,6 @@
 
+import { Meteors } from "@/components/ui/meteors";
+
 const Profile = () => {
   return (
     <section id="profile" className="relative py-20 bg-gradient-to-b from-neutral-50 to-white dark:from-neutral-800/50 dark:to-neutral-900">
@@ -16,7 +18,7 @@ const Profile = () => {
               <p className="text-neutral-600 dark:text-neutral-300 mb-6 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200">
                 I'm a passionate developer with over 5 years of experience in creating digital solutions. My journey in tech has been driven by a desire to build meaningful and impactful applications.
               </p>
-              <div className="space-y-4">
+              <div className="relative space-y-4 p-6 bg-white/70 dark:bg-neutral-800/50 rounded-xl shadow-sm overflow-hidden">
                 <div className="group">
                   <h3 className="font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">Education</h3>
                   <p className="text-neutral-600 dark:text-neutral-300 group-hover:translate-x-1 transition-transform duration-200">MSc in Computer Science, Tech University</p>
@@ -29,6 +31,10 @@ const Profile = () => {
                   <h3 className="font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">Location</h3>
                   <p className="text-neutral-600 dark:text-neutral-300 group-hover:translate-x-1 transition-transform duration-200">San Francisco, CA</p>
                 </div>
+                
+                {/* Meteor effect */}
+                <Meteors number={12} />
+                
                 <button 
                   className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-accent-foreground text-white rounded-lg hover:bg-accent-foreground/90 transition-colors duration-200 group"
                   onClick={() => window.open('/resume.pdf', '_blank')}

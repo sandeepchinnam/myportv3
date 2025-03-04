@@ -1,4 +1,6 @@
 
+import { Meteors } from "@/components/ui/meteors";
+
 const certificates = [
   {
     title: "Advanced Web Development",
@@ -33,13 +35,16 @@ const Certificates = () => {
             {certificates.map((cert) => (
               <div
                 key={cert.title}
-                className="group bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50"
+                className="group relative bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-white/50 dark:bg-neutral-800/50 overflow-hidden"
               >
                 <h3 className="text-xl font-semibold mb-2 dark:text-white group-hover:text-accent-foreground transition-colors duration-200">
                   {cert.title}
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-300">{cert.issuer}</p>
                 <p className="text-sm text-neutral-500 dark:text-neutral-400">{cert.date}</p>
+                
+                {/* Meteor effect */}
+                <Meteors number={10} />
               </div>
             ))}
           </div>

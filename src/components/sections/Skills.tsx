@@ -1,5 +1,6 @@
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Meteors } from "@/components/ui/meteors";
 
 const skills = [
   {
@@ -40,9 +41,9 @@ const Skills = () => {
             {skills.map((skillSet, index) => (
               <div
                 key={skillSet.category}
-                className={`group p-5 bg-card dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50 transform transition-all duration-1000 delay-${index * 200} ${
+                className={`group relative p-5 bg-card dark:bg-card-dark rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm bg-opacity-50 dark:bg-opacity-50 transform transition-all duration-1000 delay-${index * 200} ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                } overflow-hidden`}
               >
                 <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark group-hover:text-accent transition-colors duration-200">
                   {skillSet.category}
@@ -58,6 +59,9 @@ const Skills = () => {
                     </li>
                   ))}
                 </ul>
+                
+                {/* Meteor effect */}
+                <Meteors number={8} />
               </div>
             ))}
           </div>
