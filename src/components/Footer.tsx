@@ -7,7 +7,7 @@ const Footer = () => {
     { icon: <Github className="h-5 w-5" />, href: "https://github.com/sandeepchinnam", label: "GitHub" },
     { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/sandeep939898/", label: "LinkedIn" },
     { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", label: "Twitter" },
-    { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com", label: "Instagram" }
+    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/s_andeep_ch/", label: "Instagram" }
   ];
 
   return (
