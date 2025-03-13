@@ -20,10 +20,10 @@ const Hero = () => {
             Welcome to my portfolio
           </span>
           <h1 className="animate-fadeIn opacity-0 [animation-delay:400ms] text-4xl md:text-6xl font-display font-bold mb-6 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-600 dark:from-white dark:to-neutral-400">
-            Creating Digital Experiences That Matter
+            SANDEEP CHINNAM
           </h1>
           <p className="animate-fadeIn opacity-0 [animation-delay:600ms] text-neutral-600 dark:text-neutral-300 text-lg mb-8">
-            I'm a passionate developer focused on building beautiful, functional, and user-centered digital experiences.
+            To obtain an engaging and fulfilling role where I can apply my expertise, knowledge, and experience to make a meaningful impact and advance my career in a vibrant organization.
           </p>
           <div className="animate-fadeIn opacity-0 [animation-delay:800ms] flex flex-col sm:flex-row gap-4 justify-center">
             <a
