@@ -4,8 +4,8 @@ import { Meteors } from "@/components/ui/meteors";
 const certificates = [
   {
     title: "AWS CLOUD PRACTITIONER",
-    issuer: "Tech Academy",
-    date: "2023"
+    issuer: "AWS",
+    date: "2022"
   },
   {
     title: "UNITY PROGRAMER",
@@ -14,7 +14,7 @@ const certificates = [
   },
   {
     title: "Cloud Architecture",
-    issuer: "Cloud Experts",
+    issuer: "AWS",
     date: "2022"
   }
 ];
